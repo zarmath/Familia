@@ -166,13 +166,16 @@
       background: rgba(255,255,255,.04);
       color: var(--muted);
     }
-    table{
-      width:100%;
-      border-collapse: collapse;
-      overflow:hidden;
+    .table-scroll{
       border-radius: 14px;
       border:1px solid var(--line);
       background: rgba(0,0,0,.12);
+      overflow-x:auto;
+      box-shadow: var(--shadow);
+    }
+    .table-scroll table{
+      width:100%;
+      border-collapse: collapse;
     }
     th, td{
       padding:10px 10px;
@@ -193,6 +196,51 @@
     .note .tag{background: rgba(255,255,255,.03)}
     footer{padding:16px;color:var(--muted);text-align:center;font-size:12px}
     code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+    @media (max-width: 640px){
+      body{
+        padding:1rem;
+      }
+      .wrap{
+        padding:18px;
+      }
+      header{
+        border-radius:14px;
+      }
+      .hero{
+        padding:16px;
+        gap:12px;
+      }
+      .pillrow{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .cta{
+        padding:18px;
+      }
+      .btnrow{
+        flex-direction:column;
+        align-items:stretch;
+      }
+      main{
+        gap:12px;
+      }
+      section.card{
+        padding:16px;
+      }
+      .cards{
+        grid-template-columns:1fr;
+      }
+      .grid2{
+        grid-template-columns:1fr;
+      }
+      .note{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .table-scroll{
+        border-radius:12px;
+      }
+    }
   </style>
 </head>
 
@@ -252,7 +300,8 @@
 
         <div class="divider"></div>
 
-        <table aria-label="Ejemplos de salidas BGY a Milano Centrale (según PDF)">
+        <div class="table-scroll">
+          <table aria-label="Ejemplos de salidas BGY a Milano Centrale (según PDF)">
           <thead>
             <tr>
               <th>Opción</th>
@@ -287,7 +336,8 @@
               <td>Riesgo medio: cualquier cola/retraso os hace perderlo.</td>
             </tr>
           </tbody>
-        </table>
+          </table>
+        </div>
 
         <div class="note">
           <span class="tag">📍 Destino recomendado: Milano Centrale</span>
@@ -388,7 +438,8 @@
               Para un Milan–Juve, lo normal es que el rango suba por demanda.
             </p>
             <div class="divider"></div>
-            <table aria-label="Rango de precios orientativo por sector">
+            <div class="table-scroll">
+              <table aria-label="Rango de precios orientativo por sector">
               <thead>
                 <tr>
                   <th>Sector</th>
@@ -413,7 +464,8 @@
                   <td>Mejor visión, más caro (sube mucho en grandes partidos).</td>
                 </tr>
               </tbody>
-            </table>
+              </table>
+            </div>
 
             <div class="note">
               <span class="tag">🎟️ Mejor comprar oficial</span>
@@ -519,7 +571,8 @@
           En el PDF aparecen estas salidas y llegadas.
         </p>
 
-        <table aria-label="Opciones de bus para llegar a BGY">
+        <div class="table-scroll">
+          <table aria-label="Opciones de bus para llegar a BGY">
           <thead>
             <tr>
               <th>Opción</th>
@@ -559,7 +612,8 @@
               <td>Demasiado justo: cualquier retraso os pone en riesgo.</td>
             </tr>
           </tbody>
-        </table>
+          </table>
+        </div>
 
         <div class="divider"></div>
         <div class="warn">
