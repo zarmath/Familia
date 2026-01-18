@@ -400,152 +400,332 @@
       </section>
 
       <!-- 2) ALOJAMIENTO -->
-      <section class="card">
+      <section id="apartamentos" class="section">
+  <style>
+    :root{
+      --bg:#0b1220; --card:#111a2e; --muted:#9fb0d0; --text:#e9eefc;
+      --accent:#7aa2ff; --line:rgba(255,255,255,.10);
+      --ok:#2dd4bf; --warn:#fbbf24;
+    }
+    .section{max-width:1100px;margin:0 auto;padding:20px}
+    .section h2{margin:0 0 10px 0;color:var(--text);font-size:clamp(20px,2.4vw,28px)}
+    .section p{margin:0 0 16px 0;color:var(--muted);line-height:1.5}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px}
+    @media (min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    details.card{
+      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:16px;
+      overflow:hidden;
+    }
+    summary{
+      list-style:none; cursor:pointer; padding:14px 14px;
+      display:flex; gap:12px; align-items:flex-start; justify-content:space-between;
+    }
+    summary::-webkit-details-marker{display:none}
+    .title{display:flex;flex-direction:column;gap:6px;min-width:0}
+    .name{color:var(--text);font-weight:700;font-size:16px;line-height:1.2}
+    .meta{display:flex;flex-wrap:wrap;gap:8px;color:var(--muted);font-size:13px}
+    .pill{border:1px solid var(--line);border-radius:999px;padding:4px 9px;white-space:nowrap}
+    .pill.ok{border-color:rgba(45,212,191,.35);color:#a7f3d0}
+    .pill.warn{border-color:rgba(251,191,36,.35);color:#fde68a}
+    .chev{color:var(--muted);font-size:18px;line-height:1}
+    details[open] .chev{transform:rotate(180deg)}
+    .body{padding:0 14px 14px 14px;border-top:1px solid var(--line)}
+    .body .cols{display:grid;grid-template-columns:1fr;gap:10px;padding-top:12px}
+    @media (min-width:700px){.body .cols{grid-template-columns:1.2fr .8fr}}
+    .body h3{margin:0 0 8px 0;color:var(--text);font-size:14px}
+    .body ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.45}
+    .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    a.btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 12px;border-radius:12px;text-decoration:none;
+      border:1px solid var(--line);color:var(--text);background:rgba(17,26,46,.55);
+      font-weight:600;font-size:13px
+    }
+    a.btn.primary{border-color:rgba(122,162,255,.45);background:rgba(122,162,255,.12)}
+    a.btn:hover{filter:brightness(1.06)}
+    .note{margin-top:10px;color:var(--muted);font-size:12.5px}
+    .hint{color:var(--muted);font-size:12.5px;margin-top:6px}
+  </style>
+
+  <h2>Apartamentos (6) — priorizando precio + buenas comunicaciones</h2>
+  <p>
+    Listado tipo “acordeón”: pulsa en cada tarjeta para ver detalles y abrir el enlace directo de reserva.
+    <span class="hint">Nota: los precios finales para <strong>24–27 abril</strong> cambian mucho según disponibilidad; te dejo un <strong>rango orientativo</strong> y el enlace directo para comprobar el precio exacto al momento.</span>
+  </p>
+
+  <div class="grid">
+
+    <!-- 1 -->
+    <details class="card">
+      <summary>
         <div class="title">
-          <h2>2) Dónde dormir (apartamento con cocina): zonas que mejor encajan</h2>
-          <div class="kicker">Centro vs logística vs ambiente</div>
+          <div class="name">Milan Apartment Rental (zona Milano Centrale)</div>
+          <div class="meta">
+            <span class="pill ok">Cocina/Kitchenette</span>
+            <span class="pill">Aprox. 1.7 mi del centro</span>
+            <span class="pill warn">€110–€220 / noche (orientativo)</span>
+            <span class="pill">Ideal por conexiones (metro/tren)</span>
+          </div>
         </div>
-
-        <p class="muted" style="margin-top:0">
-          Para familia con adolescentes y partido en San Siro, normalmente funcionan muy bien estas 3 zonas:
-        </p>
-
-        <div class="cards">
-          <article class="stay">
-            <h3>Duomo / Centro</h3>
-            <p class="muted" style="margin:0">Todo a mano andando. Más caro y más gente.</p>
-            <div class="tagrow"><span class="tag">🏛️ Imprescindibles</span><span class="tag">👟 A pie</span><span class="tag">€€€</span></div>
-            <div class="divider"></div>
-            <ul class="list">
-              <li>Ideal si queréis “ver lo máximo” con mínimo transporte.</li>
-              <li>Contras: precio y ruido según calle.</li>
-            </ul>
-            <div class="apt-meta">
-              <span>Precio aproximado: 230 €/noche</span>
-              <a href="https://www.google.com/maps/place/Milano+Duomo/" target="_blank" rel="noopener">Ver en el mapa</a>
-            </div>
-            <button type="button" class="apt-toggle" data-target="apt-duomo" aria-controls="apt-duomo" aria-expanded="false">Más detalles</button>
-            <div id="apt-duomo" class="apt-details">
-              <p>Ejemplo: apartamento “Duomo Panorama” con 2 habitaciones, cocina completa y ventanas grandes, ideal para explotar la ciudad a pie.</p>
-              <a class="apt-link" href="https://www.booking.com/searchresults.es.html?city=-117525&aid=304142" target="_blank" rel="noopener">Reservar en Booking</a>
-            </div>
-          </article>
-
-          <article class="stay">
-            <h3>Milano Centrale</h3>
-            <p class="muted" style="margin:0">Logística perfecta (BGY, metro, tren). Muy práctico.</p>
-            <div class="tagrow"><span class="tag">🚆 Conexiones</span><span class="tag">🧳 Fácil</span><span class="tag">€€</span></div>
-            <div class="divider"></div>
-            <ul class="list">
-              <li>Perfecto para llegar/salir sin estrés.</li>
-              <li>Ideal si vais a priorizar comodidad sobre “encanto” del barrio.</li>
-            </ul>
-            <div class="apt-meta">
-              <span>Precio promedio: 165 €/noche</span>
-              <a href="https://www.google.com/maps/place/Milano+Centrale/" target="_blank" rel="noopener">Ver en el mapa</a>
-            </div>
-            <button type="button" class="apt-toggle" data-target="apt-centrale" aria-controls="apt-centrale" aria-expanded="false">Más detalles</button>
-            <div id="apt-centrale" class="apt-details">
-              <p>Apartamento tipo “city hub” con sofá cama, nevera grande y acceso rápido a trenes/buses para el partido o excursiones.</p>
-              <a class="apt-link" href="https://www.booking.com/searchresults.es.html?city=-117527&aid=304142" target="_blank" rel="noopener">Reservar en Booking</a>
-            </div>
-          </article>
-
-          <article class="stay">
-            <h3>Navigli</h3>
-            <p class="muted" style="margin:0">Zona con ambiente y paseos. Muy “teen-friendly”.</p>
-            <div class="tagrow"><span class="tag">🌙 Vida</span><span class="tag">📸 Canales</span><span class="tag">€€</span></div>
-            <div class="divider"></div>
-            <ul class="list">
-              <li>Perfecta para cenas y ambiente por la tarde-noche.</li>
-              <li>Contras: algunas calles pueden ser ruidosas.</li>
-            </ul>
-            <div class="apt-meta">
-              <span>Precio orientativo: 190 €/noche</span>
-              <a href="https://www.google.com/maps/place/Navigli,+Milano/" target="_blank" rel="noopener">Ver en el mapa</a>
-            </div>
-            <button type="button" class="apt-toggle" data-target="apt-navigli" aria-controls="apt-navigli" aria-expanded="false">Más detalles</button>
-            <div id="apt-navigli" class="apt-details">
-              <p>Estudio con balcón sobre el canal, kitchenette completa y limpieza diaria opcional para mantener alertas a los teens tras el partido.</p>
-              <a class="apt-link" href="https://www.booking.com/searchresults.es.html?city=-117531&aid=304142" target="_blank" rel="noopener">Reservar en Booking</a>
-            </div>
-          </article>
-          <article class="stay">
-            <h3>Isola Loft económico</h3>
-            <p class="muted" style="margin:0">Zona emergente con metros y vida local, ideal para estancias con presupuesto contenido.</p>
-            <div class="tagrow"><span class="tag">🚇 Metro</span><span class="tag">🪄 Creativo</span><span class="tag">€</span></div>
-            <div class="divider"></div>
-            <ul class="list">
-              <li>Loft compacto con litera, cocina pequeña y buena conexión a la red verde.</li>
-              <li>Perfecto para familias que priorizan ahorro sin renunciar a limpieza de hotel.</li>
-            </ul>
-            <div class="apt-meta">
-              <span>Precio económico: 125 €/noche</span>
-              <a href="https://www.google.com/maps/place/Isola,+Milano/" target="_blank" rel="noopener">Ver en el mapa</a>
-            </div>
-            <button type="button" class="apt-toggle" data-target="apt-isola" aria-controls="apt-isola" aria-expanded="false">Más detalles</button>
-            <div id="apt-isola" class="apt-details">
-              <p>Apartamento tipo loft con cama alta, escritorio y cocina compartida; ideal para noches tranquilas tras el partido.</p>
-              <a class="apt-link" href="https://www.airbnb.com/s/Isola--Milan--Italy/homes" target="_blank" rel="noopener">Reservar en Airbnb</a>
-            </div>
-          </article>
-          <article class="stay">
-            <h3>Città Studi Studio</h3>
-            <p class="muted" style="margin:0">Barrio universitario con metro directo y cafés tranquilos.</p>
-            <div class="tagrow"><span class="tag">🎓 Universitario</span><span class="tag">🍽️ Cafeterías</span><span class="tag">€</span></div>
-            <div class="divider"></div>
-            <ul class="list">
-              <li>Mini piso con cama doble, cocina equipada y lavandería en el mismo edificio.</li>
-              <li>Buena opción para familias que planean cocinar y hacer excursiones ligeras.</li>
-            </ul>
-            <div class="apt-meta">
-              <span>Precio promedio: 120 €/noche</span>
-              <a href="https://www.google.com/maps/place/Citt%C3%A0+Studi,+Milano/" target="_blank" rel="noopener">Ver en el mapa</a>
-            </div>
-            <button type="button" class="apt-toggle" data-target="apt-cittastudi" aria-controls="apt-cittastudi" aria-expanded="false">Más detalles</button>
-            <div id="apt-cittastudi" class="apt-details">
-              <p>Apartamento con dormitorio grande, sofá cama y balcón trasero para mantener la tranquilidad en las noches de partido.</p>
-              <a class="apt-link" href="https://www.booking.com/searchresults.es.html?city=-117566&aid=304142" target="_blank" rel="noopener">Reservar en Booking</a>
-            </div>
-          </article>
-          <article class="stay">
-            <h3>Porta Romana Budget</h3>
-            <p class="muted" style="margin:0">Zona residencial con parques y buen acceso al transporte nocturno.</p>
-            <div class="tagrow"><span class="tag">🌳 Residencial</span><span class="tag">🚆 Tranquilo</span><span class="tag">€</span></div>
-            <div class="divider"></div>
-            <ul class="list">
-              <li>Flat con 2 camas y cocina, muy cerca del tram que llega al centro.</li>
-              <li>Recomendado si buscáis bajar el presupuesto sin salir de la ciudad principal.</li>
-            </ul>
-            <div class="apt-meta">
-              <span>Precio orientativo: 110 €/noche</span>
-              <a href="https://www.google.com/maps/place/Porta+Romana,+Milano/" target="_blank" rel="noopener">Ver en el mapa</a>
-            </div>
-            <button type="button" class="apt-toggle" data-target="apt-portaromana" aria-controls="apt-portaromana" aria-expanded="false">Más detalles</button>
-            <div id="apt-portaromana" class="apt-details">
-              <p>Pequeño apartamento familiar con sofá cama doble, Wi-Fi y cocina abierta para desayunos rápidos antes del bus a BGY.</p>
-              <a class="apt-link" href="https://www.airbnb.com/s/Porta-Romana--Milan--Italy/homes" target="_blank" rel="noopener">Reservar en Airbnb</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="divider"></div>
-        <div class="grid2">
+        <div class="chev">▾</div>
+      </summary>
+      <div class="body">
+        <div class="cols">
           <div>
-            <h3 style="margin:0 0 6px;font-size:15px">Checklist para filtrar (importante)</h3>
-            <ul class="list">
-              <li><strong>Cocina completa</strong>: placa + nevera + utensilios (no solo “kitchenette”).</li>
-              <li><strong>4 plazas reales</strong>: 2 camas + sofá-cama decente, o 2 habitaciones.</li>
-              <li><strong>Ascensor</strong> si es un 3º/4º.</li>
-              <li><strong>Metro cerca</strong> (ideal para San Siro y Duomo).</li>
-              <li><strong>Cancelación flexible</strong> por si ajusta el horario del partido.</li>
+            <h3>Por qué interesa</h3>
+            <ul>
+              <li>Muy buena base logística si queréis moveros rápido por metro y volver tarde tras el partido.</li>
+              <li>Buena opción familiar si encontráis unidad para 4.</li>
+            </ul>
+
+            <div class="links">
+              <a class="btn primary" href="https://www.booking.com/hotel/it/milan-apartment-rental.en-gb.html" target="_blank" rel="noopener">Reservar (Booking)</a>
+              <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Milan%20Apartment%20Rental%20Milano%20Centrale" target="_blank" rel="noopener">Ver en Google Maps</a>
+            </div>
+
+            <div class="note">
+              Distancia al centro según Booking: “1.7 mi from the centre of Milan”.  [oai_citation:0‡Booking.com](https://www.booking.com/hotel/it/milan-apartment-rental.en-gb.html?utm_source=chatgpt.com)
+            </div>
+          </div>
+          <div>
+            <h3>Ubicación / transporte</h3>
+            <ul>
+              <li>Barrio: Estación Central (excelente para metro M2/M3 y tranvías).</li>
+              <li>Centro (Duomo): 4 paradas de metro aprox. (según la línea/ruta).</li>
+              <li>San Siro: normalmente metro + transbordo (según combinación del día).</li>
             </ul>
           </div>
-          <div class="warn">
-            Elección rápida: <strong>Centrale</strong> gana por logística (especialmente el lunes). <strong>Navigli</strong> gana por ambiente.
+        </div>
+      </div>
+    </details>
+
+    <!-- 2 -->
+    <details class="card">
+      <summary>
+        <div class="title">
+          <div class="name">Easy Milano Apartment Navigli (Navigli)</div>
+          <div class="meta">
+            <span class="pill ok">Cocina</span>
+            <span class="pill">Aprox. 1.2 mi del centro</span>
+            <span class="pill warn">€95–€190 / noche (orientativo)</span>
+            <span class="pill">Zona con ambiente (canales)</span>
           </div>
         </div>
-      </section>
+        <div class="chev">▾</div>
+      </summary>
+      <div class="body">
+        <div class="cols">
+          <div>
+            <h3>Por qué interesa</h3>
+            <ul>
+              <li>Zona Navigli: ambiente por la tarde/noche, muy bien para cenar con adolescentes.</li>
+              <li>Buen equilibrio entre “experiencia Milán” y acceso al centro.</li>
+            </ul>
+
+            <div class="links">
+              <a class="btn primary" href="https://www.booking.com/hotel/it/navigli-apartments.html" target="_blank" rel="noopener">Reservar (Booking)</a>
+              <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Via%20Pavia%203%2C%2020123%20Milano" target="_blank" rel="noopener">Ver en Google Maps</a>
+            </div>
+
+            <div class="note">
+              Dirección y “Kitchen” en la ficha, y distancia al centro “1.2 mi”.  [oai_citation:1‡Booking.com](https://www.booking.com/hotel/it/navigli-apartments.html)
+            </div>
+          </div>
+          <div>
+            <h3>Ubicación / transporte</h3>
+            <ul>
+              <li>Barrio: Navigli (Darsena / Porta Genova).</li>
+              <li>Centro: fácil en tranvía/metro (según parada concreta).</li>
+              <li>Plan familiar: paseos por canales + helado + cena temprana.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 3 -->
+    <details class="card">
+      <summary>
+        <div class="title">
+          <div class="name">Italianway - Bandello 4&1 (zona Santa Maria delle Grazie)</div>
+          <div class="meta">
+            <span class="pill ok">Cocina equipada</span>
+            <span class="pill">Aprox. 1 mi del centro</span>
+            <span class="pill warn">€140–€280 / noche (orientativo)</span>
+            <span class="pill">Muy céntrico para visitas</span>
+          </div>
+        </div>
+        <div class="chev">▾</div>
+      </summary>
+      <div class="body">
+        <div class="cols">
+          <div>
+            <h3>Por qué interesa</h3>
+            <ul>
+              <li>Ubicación muy potente para “visitar andando” (zona histórica y cultural).</li>
+              <li>Si el precio cuadra, os ahorra muchos desplazamientos.</li>
+            </ul>
+
+            <div class="links">
+              <a class="btn primary" href="https://www.booking.com/hotel/it/italianway-bandello-41.en-gb.html" target="_blank" rel="noopener">Reservar (Booking)</a>
+              <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Bandello%204%2C%20Milano" target="_blank" rel="noopener">Ver en Google Maps</a>
+            </div>
+
+            <div class="note">
+              Cocina equipada y distancia al centro “1 mi”.  [oai_citation:2‡Booking.com](https://www.booking.com/hotel/it/italianway-bandello-41.html?utm_source=chatgpt.com)
+            </div>
+          </div>
+          <div>
+            <h3>Ubicación / transporte</h3>
+            <ul>
+              <li>Cerca de puntos clave (según disponibilidad de entradas: zona de “La Última Cena”).</li>
+              <li>Para San Siro: buenas combinaciones de metro (según estación).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 4 -->
+    <details class="card">
+      <summary>
+        <div class="title">
+          <div class="name">Apartments Porta Venezia - Milan downtown (Porta Venezia)</div>
+          <div class="meta">
+            <span class="pill ok">Cocina</span>
+            <span class="pill">Aprox. 1.1 mi del centro</span>
+            <span class="pill warn">€120–€240 / noche (orientativo)</span>
+            <span class="pill">Conexión metro (Línea roja/verde según zona)</span>
+          </div>
+        </div>
+        <div class="chev">▾</div>
+      </summary>
+      <div class="body">
+        <div class="cols">
+          <div>
+            <h3>Por qué interesa</h3>
+            <ul>
+              <li>Zona agradable, con comercios y buen acceso a transporte público.</li>
+              <li>Buen “punto medio” entre Centrale y el centro turístico.</li>
+            </ul>
+
+            <div class="links">
+              <a class="btn primary" href="https://www.booking.com/hotel/it/bilocale-porta-venezia.en-gb.html" target="_blank" rel="noopener">Reservar (Booking)</a>
+              <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Apartments%20Porta%20Venezia%20Milan%20downtown" target="_blank" rel="noopener">Ver en Google Maps</a>
+            </div>
+
+            <div class="note">
+              Distancia al centro “1.1 mi from the centre of Milan”.  [oai_citation:3‡Booking.com](https://www.booking.com/hotel/it/bilocale-porta-venezia.en-gb.html?utm_source=chatgpt.com)
+            </div>
+          </div>
+          <div>
+            <h3>Ubicación / transporte</h3>
+            <ul>
+              <li>Ideal si queréis moveros rápido y tener alternativas de restaurantes.</li>
+              <li>Para Duomo: metro directo o con 1 transbordo (según estación exacta).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 5 -->
+    <details class="card">
+      <summary>
+        <div class="title">
+          <div class="name">Design Apartment Milano Porta Romana (Porta Romana)</div>
+          <div class="meta">
+            <span class="pill ok">Cocina</span>
+            <span class="pill">Aprox. 1.7 mi del centro</span>
+            <span class="pill warn">€110–€210 / noche (orientativo)</span>
+            <span class="pill">Metro cercano (Porta Romana)</span>
+          </div>
+        </div>
+        <div class="chev">▾</div>
+      </summary>
+      <div class="body">
+        <div class="cols">
+          <div>
+            <h3>Por qué interesa</h3>
+            <ul>
+              <li>Zona residencial con buena vida local (menos “turística” pero cómoda).</li>
+              <li>Buena relación comunicación/precio cuando el centro está caro.</li>
+            </ul>
+
+            <div class="links">
+              <a class="btn primary" href="https://www.booking.com/hotel/it/design-apartment-milano-porta-romana-ac-amp-check-in-24h.en-gb.html" target="_blank" rel="noopener">Reservar (Booking)</a>
+              <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Via%20Tito%20Livio%2026%2C%2020137%20Milano" target="_blank" rel="noopener">Ver en Google Maps</a>
+            </div>
+
+            <div class="note">
+              Distancia al centro “1.7 mi from the centre of Milan”.  [oai_citation:4‡Booking.com](https://www.booking.com/hotel/it/design-apartment-milano-porta-romana-ac-amp-check-in-24h.en-gb.html?utm_source=chatgpt.com)
+            </div>
+          </div>
+          <div>
+            <h3>Ubicación / transporte</h3>
+            <ul>
+              <li>Metro Porta Romana (según la ficha, a ~17 min andando).  [oai_citation:5‡Booking.com](https://www.booking.com/hotel/it/design-apartment-milano-porta-romana-ac-amp-check-in-24h.en-gb.html?utm_source=chatgpt.com)</li>
+              <li>Centro: rápido en metro.</li>
+              <li>San Siro: ruta típica con transbordo (depende del día/hora).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 6 -->
+    <details class="card">
+      <summary>
+        <div class="title">
+          <div class="name">Designed Pop Apartment (2 hab, 2 baños) — cerca de Centrale</div>
+          <div class="meta">
+            <span class="pill ok">Cocina equipada</span>
+            <span class="pill">Aprox. 1.9 mi del centro</span>
+            <span class="pill warn">€170–€360 / noche (orientativo)</span>
+            <span class="pill">Muy buena para familia (4)</span>
+          </div>
+        </div>
+        <div class="chev">▾</div>
+      </summary>
+      <div class="body">
+        <div class="cols">
+          <div>
+            <h3>Por qué interesa</h3>
+            <ul>
+              <li>Formato perfecto para vosotros (2 habitaciones + 2 baños) si el presupuesto lo permite.</li>
+              <li>Muy práctico para entrar/salir rápido y para noches de partido.</li>
+            </ul>
+
+            <div class="links">
+              <a class="btn primary" href="https://www.booking.com/hotel/it/pop-apartment-milan-center.html" target="_blank" rel="noopener">Reservar (Booking)</a>
+              <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Designed%20Pop%20Apartment%20Milan%20Center" target="_blank" rel="noopener">Ver en Google Maps</a>
+            </div>
+
+            <div class="note">
+              Distancia al centro “1.9 mi” y capacidad para 4.  [oai_citation:6‡Booking.com](https://www.booking.com/hotel/it/pop-apartment-milan-center.html?utm_source=chatgpt.com)
+            </div>
+          </div>
+          <div>
+            <h3>Ubicación / transporte</h3>
+            <ul>
+              <li>Cerca de conexiones M1/M2 y estación central (según la propia descripción de la ficha).  [oai_citation:7‡Booking.com](https://www.booking.com/hotel/it/pop-apartment-milan-center.html?utm_source=chatgpt.com)</li>
+              <li>Centro: metro directo o con 1 cambio.</li>
+              <li>San Siro: suele ser bastante cómodo desde M1 (según combinación).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </details>
+
+  </div>
+
+  <p class="note" style="margin-top:14px">
+    Consejo rápido para filtrar: al abrir cada enlace de Booking, mete fechas <strong>24–27 abril</strong> y marcad “apartamento entero” + “cocina”.
+    Si quieres, después te preparo una <strong>tabla comparativa</strong> (precio final, cancelación, metros, y tiempo real a Duomo/San Siro) con lo que veas al abrir los enlaces.
+  </p>
+</section>
 
       <!-- 3) PARTIDO + PRECIOS -->
       <section class="card">
