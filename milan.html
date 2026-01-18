@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Milán en familia (24–27 abril 2026) · Guía completa + buses + partido AC Milan</title>
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#121926;
+      --muted:#9fb0c3;
+      --text:#eaf0f7;
+      --accent:#ff3b30;
+      --accent2:#4aa3ff;
+      --line:rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --ok: rgba(76, 217, 100, .16);
+      --warn: rgba(255, 204, 0, .14);
+      --bad: rgba(255, 59, 48, .15);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(74,163,255,.22), transparent 55%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(255,59,48,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:22px}
+    header{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(18,25,38,.92), rgba(18,25,38,.70));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero{
+      display:grid;
+      gap:16px;
+      padding:22px;
+      grid-template-columns: 1.25fr .75fr;
+      align-items:start;
+    }
+    @media (max-width: 860px){ .hero{grid-template-columns:1fr} }
+    .badge{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 12px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      font-size: 13px;
+      width:fit-content;
+    }
+    .h1{
+      font-size: clamp(22px, 3.2vw, 34px);
+      margin:10px 0 6px;
+      letter-spacing: .2px;
+    }
+    .sub{color:var(--muted); margin:0 0 14px}
+    .pillrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .pill{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      padding:10px 12px;
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .cta{
+      border:1px solid rgba(255,59,48,.35);
+      background: linear-gradient(180deg, rgba(255,59,48,.18), rgba(255,59,48,.08));
+      border-radius: var(--radius);
+      padding:16px;
+    }
+    .cta h3{margin:0 0 8px;font-size:16px}
+    .cta p{margin:0;color:var(--muted);font-size:14px}
+    .cta .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:10px 12px; border-radius: 14px;
+      text-decoration:none;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      font-weight:600;
+      font-size:14px;
+    }
+    .btn.primary{
+      border:1px solid rgba(255,59,48,.55);
+      background: rgba(255,59,48,.20);
+    }
+    .btn.secondary{
+      border:1px solid rgba(74,163,255,.55);
+      background: rgba(74,163,255,.15);
+    }
+    main{margin-top:16px;display:grid;gap:16px}
+    section.card{
+      border:1px solid var(--line);
+      background: rgba(18,25,38,.78);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    .grid2{display:grid;gap:12px;grid-template-columns: 1fr 1fr}
+    @media (max-width: 860px){.grid2{grid-template-columns:1fr}}
+    .title{
+      display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+      margin-bottom:10px
+    }
+    .title h2{margin:0;font-size:18px}
+    .kicker{color:var(--muted);font-size:13px}
+    .muted{color:var(--muted)}
+    .divider{height:1px;background:var(--line);margin:14px 0}
+    ul.list{margin:0;padding-left:18px}
+    ul.list li{margin:6px 0}
+    .warn{
+      border:1px dashed rgba(255,255,255,.25);
+      background: rgba(0,0,0,.15);
+      padding:12px;
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .cards{
+      display:grid;
+      gap:12px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 980px){.cards{grid-template-columns: repeat(2, 1fr)}}
+    @media (max-width: 640px){.cards{grid-template-columns: 1fr}}
+    .stay{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius: 16px;
+      padding: 14px;
+    }
+    .stay h3{margin:0 0 6px;font-size:15px}
+    .tagrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+    .tag{
+      font-size:12px;
+      color:var(--muted);
+      border:1px solid var(--line);
+      padding:6px 8px;
+      border-radius:999px;
+      background: rgba(0,0,0,.12);
+    }
+    .timeline{display:grid;gap:12px}
+    .day{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius: 16px;
+      padding: 14px;
+    }
+    .dayhead{
+      display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between
+    }
+    .dayhead h3{margin:0;font-size:15px}
+    .chip{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+    }
+    table{
+      width:100%;
+      border-collapse: collapse;
+      overflow:hidden;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.12);
+    }
+    th, td{
+      padding:10px 10px;
+      border-bottom:1px solid var(--line);
+      text-align:left;
+      font-size: 13px;
+      vertical-align: top;
+    }
+    th{color: var(--muted); font-weight:700; background: rgba(255,255,255,.03)}
+    tr:last-child td{border-bottom:none}
+    .row-ok{background: var(--ok)}
+    .row-warn{background: var(--warn)}
+    .row-bad{background: var(--bad)}
+    .note{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .note .tag{background: rgba(255,255,255,.03)}
+    footer{padding:16px;color:var(--muted);text-align:center;font-size:12px}
+    code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="hero">
+        <div>
+          <div class="badge">✈️ Zaragoza → Bérgamo (BGY) · 👨‍👩‍👧‍👦 2 adultos + 2 teens (13 y 15) · 🏠 Apto con cocina</div>
+          <h1 class="h1">Milán en familia (vie 24 → lun 27 abril 2026)</h1>
+          <p class="sub">
+            Guía completa y práctica: buses BGY↔Milán, zonas de alojamiento, plan por días, San Siro y partido del AC Milan.
+          </p>
+          <div class="pillrow">
+            <div class="pill">🚍 Buses ya comprados</div>
+            <div class="pill">🚇 Centro o metro directo</div>
+            <div class="pill">⚽ Partido AC Milan</div>
+            <div class="pill">🍕 Cocina + flexibilidad</div>
+          </div>
+        </div>
+
+        <div class="cta">
+          <h3>Partido del AC Milan (ese fin de semana)</h3>
+          <p>
+            <strong>AC Milan vs Juventus</strong> · <strong>Domingo 26/04/2026</strong> · <strong>17:00 (CET, a confirmar)</strong> · San Siro
+          </p>
+          <div class="btnrow">
+            <a class="btn primary" href="https://booking.acmilan.com/en" target="_blank" rel="noopener">🎟️ Tickets oficiales AC Milan</a>
+            <a class="btn" href="https://www.acmilan.com/en/season/active/schedule/all" target="_blank" rel="noopener">📅 Calendario oficial AC Milan</a>
+            <a class="btn secondary" href="https://sansirostadium.com/?lang=en" target="_blank" rel="noopener">🏟️ Tour/Museo San Siro</a>
+          </div>
+          <div class="divider"></div>
+          <div class="warn">
+            La hora puede ajustarse por TV/organización. Usad como fuente final el portal oficial de tickets y el calendario del club.
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1) BUS AEROPUERTO BERGAMO -> MILAN -->
+      <section class="card">
+        <div class="title">
+          <h2>1) Autobús Aeropuerto de Bérgamo (BGY) → Milano Centrale (viernes 24)</h2>
+          <div class="kicker">Tabla tipo “mejor / alternativa / ajustada”</div>
+        </div>
+
+        <p class="muted" style="margin-top:0">
+          El PDF muestra salidas muy frecuentes (aprox. cada 30 min) y un trayecto típico de ~1h.
+          Como no me has dado la hora exacta de aterrizaje, te dejo el criterio de elección + una “ventana” de horarios típicos para encajaros.
+        </p>
+
+        <div class="warn">
+          Regla práctica (con familia + posible retraso + equipaje): contad con <strong>60–90 min</strong> desde el aterrizaje real hasta estar sentados en el bus.
+          Si viajáis solo con equipaje de mano y todo va puntual, podéis bajar a <strong>45–60 min</strong>. Menos de eso es arriesgado.
+        </div>
+
+        <div class="divider"></div>
+
+        <table aria-label="Ejemplos de salidas BGY a Milano Centrale (según PDF)">
+          <thead>
+            <tr>
+              <th>Opción</th>
+              <th>Qué bus coger</th>
+              <th>Ejemplos de salidas (BGY → Milano Centrale)</th>
+              <th>Comentario</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-ok">
+              <td><strong>🟢 Recomendada</strong></td>
+              <td><strong>El primer bus ≥ 60–90 min tras aterrizar</strong></td>
+              <td>
+                12:25→13:25 · 12:55→13:55 · 13:25→14:25 · 13:55→14:55 · 14:25→15:25
+              </td>
+              <td>Absorbe retrasos razonables + recogida de maletas sin correr.</td>
+            </tr>
+            <tr class="row-ok">
+              <td><strong>🟢 Alternativa</strong></td>
+              <td><strong>El primer bus ≥ 45–60 min tras aterrizar</strong></td>
+              <td>
+                11:55→12:55 · 12:25→13:25 · 12:55→13:55 · 13:25→14:25
+              </td>
+              <td>Bien si el vuelo llega puntual y vais ágiles (ideal con solo cabina).</td>
+            </tr>
+            <tr class="row-warn">
+              <td><strong>🟡 Ajustada</strong></td>
+              <td><strong>El bus “inmediato” tras aterrizar</strong></td>
+              <td>
+                11:25→12:25 · 11:55→12:55 · 12:25→13:25
+              </td>
+              <td>Riesgo medio: cualquier cola/retraso os hace perderlo.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="note">
+          <span class="tag">📍 Destino recomendado: Milano Centrale</span>
+          <span class="tag">🧳 Con maletas, priorizar margen</span>
+          <span class="tag">🛒 Check-in + compra de súper</span>
+        </div>
+      </section>
+
+      <!-- 2) ALOJAMIENTO -->
+      <section class="card">
+        <div class="title">
+          <h2>2) Dónde dormir (apartamento con cocina): zonas que mejor encajan</h2>
+          <div class="kicker">Centro vs logística vs ambiente</div>
+        </div>
+
+        <p class="muted" style="margin-top:0">
+          Para familia con adolescentes y partido en San Siro, normalmente funcionan muy bien estas 3 zonas:
+        </p>
+
+        <div class="cards">
+          <article class="stay">
+            <h3>Duomo / Centro</h3>
+            <p class="muted" style="margin:0">Todo a mano andando. Más caro y más gente.</p>
+            <div class="tagrow"><span class="tag">🏛️ Imprescindibles</span><span class="tag">👟 A pie</span><span class="tag">€€€</span></div>
+            <div class="divider"></div>
+            <ul class="list">
+              <li>Ideal si queréis “ver lo máximo” con mínimo transporte.</li>
+              <li>Contras: precio y ruido según calle.</li>
+            </ul>
+          </article>
+
+          <article class="stay">
+            <h3>Milano Centrale</h3>
+            <p class="muted" style="margin:0">Logística perfecta (BGY, metro, tren). Muy práctico.</p>
+            <div class="tagrow"><span class="tag">🚆 Conexiones</span><span class="tag">🧳 Fácil</span><span class="tag">€€</span></div>
+            <div class="divider"></div>
+            <ul class="list">
+              <li>Perfecto para llegar/salir sin estrés.</li>
+              <li>Ideal si vais a priorizar comodidad sobre “encanto” del barrio.</li>
+            </ul>
+          </article>
+
+          <article class="stay">
+            <h3>Navigli</h3>
+            <p class="muted" style="margin:0">Zona con ambiente y paseos. Muy “teen-friendly”.</p>
+            <div class="tagrow"><span class="tag">🌙 Vida</span><span class="tag">📸 Canales</span><span class="tag">€€</span></div>
+            <div class="divider"></div>
+            <ul class="list">
+              <li>Perfecta para cenas y ambiente por la tarde-noche.</li>
+              <li>Contras: algunas calles pueden ser ruidosas.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="divider"></div>
+        <div class="grid2">
+          <div>
+            <h3 style="margin:0 0 6px;font-size:15px">Checklist para filtrar (importante)</h3>
+            <ul class="list">
+              <li><strong>Cocina completa</strong>: placa + nevera + utensilios (no solo “kitchenette”).</li>
+              <li><strong>4 plazas reales</strong>: 2 camas + sofá-cama decente, o 2 habitaciones.</li>
+              <li><strong>Ascensor</strong> si es un 3º/4º.</li>
+              <li><strong>Metro cerca</strong> (ideal para San Siro y Duomo).</li>
+              <li><strong>Cancelación flexible</strong> por si ajusta el horario del partido.</li>
+            </ul>
+          </div>
+          <div class="warn">
+            Elección rápida: <strong>Centrale</strong> gana por logística (especialmente el lunes). <strong>Navigli</strong> gana por ambiente.
+          </div>
+        </div>
+      </section>
+
+      <!-- 3) PARTIDO + PRECIOS -->
+      <section class="card">
+        <div class="title">
+          <h2>3) Partido AC Milan: rival, hora y presupuesto</h2>
+          <div class="kicker">Lo esencial para planificar el domingo</div>
+        </div>
+
+        <div class="grid2">
+          <div>
+            <ul class="list">
+              <li><strong>Partido:</strong> AC Milan vs Juventus</li>
+              <li><strong>Fecha:</strong> Domingo 26/04/2026</li>
+              <li><strong>Hora (publicada en sitios de resultados):</strong> 17:00 CET <span class="muted">(a confirmar)</span></li>
+              <li><strong>Estadio:</strong> San Siro (Stadio Giuseppe Meazza)</li>
+            </ul>
+            <div class="divider"></div>
+            <div class="warn">
+              Recomendación: confirmad la hora final en el portal oficial de tickets del Milan cuando se acerque la fecha.
+            </div>
+          </div>
+
+          <div class="stay">
+            <h3>Rango de precios orientativo (por entrada)</h3>
+            <p class="muted" style="margin:0">
+              Los precios reales dependen de categoría del partido, fase de venta (socios/general), sector y disponibilidad.
+              Para un Milan–Juve, lo normal es que el rango suba por demanda.
+            </p>
+            <div class="divider"></div>
+            <table aria-label="Rango de precios orientativo por sector">
+              <thead>
+                <tr>
+                  <th>Sector</th>
+                  <th>Rango típico</th>
+                  <th>Para vosotros</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Curva (fondo)</td>
+                  <td>≈ 30–60 €</td>
+                  <td>Más ambiente; bueno si queréis “experiencia”.</td>
+                </tr>
+                <tr>
+                  <td>Lateral (anillo medio/alto)</td>
+                  <td>≈ 60–120 €</td>
+                  <td>Equilibrio entre visión y precio.</td>
+                </tr>
+                <tr>
+                  <td>Central / Premium</td>
+                  <td>≈ 120–250 €+</td>
+                  <td>Mejor visión, más caro (sube mucho en grandes partidos).</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="note">
+              <span class="tag">🎟️ Mejor comprar oficial</span>
+              <span class="tag">💶 Presupuesto 4 entradas: amplio rango</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4) TRANSPORTE EN MILAN -->
+      <section class="card">
+        <div class="title">
+          <h2>4) Transporte en Milán</h2>
+          <div class="kicker">Metro + tranvía = lo más eficiente</div>
+        </div>
+
+        <div class="grid2">
+          <div>
+            <ul class="list">
+              <li>Para un fin de semana largo, el abono de <strong>72h</strong> suele compensar si vais a usar transporte varias veces al día.</li>
+              <li>Para San Siro: id con margen (antes/después del partido hay “olas” de gente).</li>
+              <li>Con adolescentes: mejor 2 “bloques” al día (mañana + tarde) y ratos libres.</li>
+            </ul>
+          </div>
+          <div class="stay">
+            <h3>Referencia oficial (ATM Milán)</h3>
+            <p class="muted" style="margin:0">Tipos de billete y dónde comprarlos.</p>
+            <div class="divider"></div>
+            <a class="btn secondary" href="https://www.atm.it/EN/ViaggiaConNoi/Biglietti/Pages/tickets_milan.aspx" target="_blank" rel="noopener">Ver billetes ATM</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5) PLAN POR DIAS -->
+      <section class="card">
+        <div class="title">
+          <h2>5) Plan por días (24–27 abril)</h2>
+          <div class="kicker">Equilibrado y realista</div>
+        </div>
+
+        <div class="timeline">
+          <div class="day">
+            <div class="dayhead">
+              <h3>Viernes 24 · Llegada + primer impacto</h3>
+              <span class="chip">Tarde suave</span>
+            </div>
+            <ul class="list">
+              <li>BGY → Milano Centrale (bus) → check-in.</li>
+              <li>Paseo “clásico” nocturno: <strong>Duomo (exterior)</strong> + <strong>Galleria</strong>.</li>
+              <li>Cena fácil + compra en súper para desayunos (cocina = ventaja).</li>
+            </ul>
+          </div>
+
+          <div class="day">
+            <div class="dayhead">
+              <h3>Sábado 25 · Centro + Castillo + plan teen-friendly</h3>
+              <span class="chip">Día fuerte</span>
+            </div>
+            <ul class="list">
+              <li>Mañana: <strong>Duomo</strong> (si subís a terrazas, reservar con tiempo).</li>
+              <li>Mediodía: <strong>Brera</strong> (calles, tiendas, helados).</li>
+              <li>Tarde: <strong>Castello Sforzesco</strong> + <strong>Parco Sempione</strong>.</li>
+              <li>Noche: <strong>Navigli</strong> (ambiente, fotos, cena).</li>
+            </ul>
+          </div>
+
+          <div class="day">
+            <div class="dayhead">
+              <h3>Domingo 26 · Día de partido</h3>
+              <span class="chip">El gran día</span>
+            </div>
+            <ul class="list">
+              <li>Mañana: plan corto (souvenirs/compras) + comida temprana.</li>
+              <li>Salida hacia San Siro con margen.</li>
+              <li><strong>AC Milan vs Juventus</strong> (17:00 CET, a confirmar).</li>
+              <li>Post-partido: cena de celebración (simple si salís tarde).</li>
+            </ul>
+          </div>
+
+          <div class="day">
+            <div class="dayhead">
+              <h3>Lunes 27 · Últimas horas + vuelta (vuelo 16:00 desde BGY)</h3>
+              <span class="chip">Mañana práctica</span>
+            </div>
+            <ul class="list">
+              <li>Check-out + consigna si hace falta.</li>
+              <li>Paseo corto + café cerca del alojamiento.</li>
+              <li>Id a Milano Centrale con margen para el bus al aeropuerto.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6) BUS MILAN -> AEROPUERTO (VUELTA) -->
+      <section class="card">
+        <div class="title">
+          <h2>6) Mejor horario de bus Milano Centrale → Aeropuerto Bérgamo (lunes 27)</h2>
+          <div class="kicker">Vuelo 16:00 · opciones con margen</div>
+        </div>
+
+        <p class="muted" style="margin-top:0">
+          Para un vuelo a las <strong>16:00</strong>, con familia y por si hay retrasos, lo óptimo es llegar al aeropuerto con <strong>~1h35–2h</strong> de margen.
+          En el PDF aparecen estas salidas y llegadas.
+        </p>
+
+        <table aria-label="Opciones de bus para llegar a BGY">
+          <thead>
+            <tr>
+              <th>Opción</th>
+              <th>Salida (Milano Centrale)</th>
+              <th>Llegada (BGY)</th>
+              <th>Margen antes del vuelo</th>
+              <th>Comentario</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-ok">
+              <td><strong>🟢 Recomendada</strong></td>
+              <td><strong>13:25</strong></td>
+              <td><strong>14:25</strong></td>
+              <td>1h35</td>
+              <td>Equilibrada: margen realista incluso con retraso moderado.</td>
+            </tr>
+            <tr class="row-ok">
+              <td><strong>🟢 Muy segura</strong></td>
+              <td><strong>12:55</strong></td>
+              <td><strong>13:55</strong></td>
+              <td>2h05</td>
+              <td>Cero estrés: ideal si queréis máxima tranquilidad.</td>
+            </tr>
+            <tr class="row-warn">
+              <td><strong>🟡 Ajustada</strong></td>
+              <td><strong>13:55</strong></td>
+              <td><strong>14:55</strong></td>
+              <td>1h05</td>
+              <td>Solo si vais muy justos. Riesgo medio por tráfico/colas.</td>
+            </tr>
+            <tr class="row-bad">
+              <td><strong>🔴 No recomendable</strong></td>
+              <td><strong>14:25</strong></td>
+              <td><strong>15:25</strong></td>
+              <td>0h35</td>
+              <td>Demasiado justo: cualquier retraso os pone en riesgo.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="divider"></div>
+        <div class="warn">
+          Regla práctica: planificad como objetivo el <strong>13:25</strong>. Si vais sobrados, el <strong>12:55</strong>.
+          El <strong>13:55</strong> dejadlo como “último recurso”.
+        </div>
+      </section>
+
+      <!-- 7) LINKS UTIL -->
+      <section class="card">
+        <div class="title">
+          <h2>7) Enlaces útiles</h2>
+          <div class="kicker">Todo lo importante en 30 segundos</div>
+        </div>
+
+        <div class="cards">
+          <article class="stay">
+            <h3>Tickets AC Milan</h3>
+            <p class="muted" style="margin:0">Compra/gestiona entradas en canal oficial.</p>
+            <div class="divider"></div>
+            <a class="btn primary" href="https://booking.acmilan.com/en" target="_blank" rel="noopener">Ir a tickets oficiales</a>
+          </article>
+
+          <article class="stay">
+            <h3>ATM Milán (transporte)</h3>
+            <p class="muted" style="margin:0">Billetes y normativa actual.</p>
+            <div class="divider"></div>
+            <a class="btn secondary" href="https://www.atm.it/EN/ViaggiaConNoi/Biglietti/Pages/tickets_milan.aspx" target="_blank" rel="noopener">Ver billetes ATM</a>
+          </article>
+
+          <article class="stay">
+            <h3>San Siro</h3>
+            <p class="muted" style="margin:0">Tour, museo y info del estadio.</p>
+            <div class="divider"></div>
+            <a class="btn" href="https://sansirostadium.com/?lang=en" target="_blank" rel="noopener">Ver San Siro</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Copia este HTML en un archivo <code>milan_24_27_2026.html</code> y ábrelo en el navegador (móvil/desktop).
+    </footer>
+  </div>
+</body>
+</html>
