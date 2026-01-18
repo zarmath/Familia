@@ -147,6 +147,59 @@
       border-radius:999px;
       background: rgba(0,0,0,.12);
     }
+    .apt-meta{
+      margin:10px 0 0;
+      font-size:13px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+    }
+    .apt-meta a{
+      color:var(--accent2);
+      font-weight:600;
+    }
+    .apt-toggle{
+      margin-top:12px;
+      background: rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight:600;
+      cursor:pointer;
+      transition: border-color .2s, background .2s;
+    }
+    .apt-toggle:hover{
+      border-color: rgba(255,255,255,.5);
+    }
+    .apt-details{
+      max-height:0;
+      overflow:hidden;
+      opacity:0;
+      transition:max-height .28s ease, opacity .28s ease;
+      font-size:14px;
+    }
+    .apt-details.expanded{
+      max-height:320px;
+      opacity:1;
+      margin-top:12px;
+    }
+    .apt-details p{
+      margin:0 0 8px;
+      line-height:1.5;
+    }
+    .apt-link{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      color:var(--accent2);
+      font-weight:600;
+    }
+    .apt-link:hover{
+      text-decoration:underline;
+    }
     .timeline{display:grid;gap:12px}
     .day{
       border:1px solid var(--line);
@@ -367,6 +420,15 @@
               <li>Ideal si queréis “ver lo máximo” con mínimo transporte.</li>
               <li>Contras: precio y ruido según calle.</li>
             </ul>
+            <div class="apt-meta">
+              <span>Precio aproximado: 230 €/noche</span>
+              <a href="https://www.google.com/maps/place/Milano+Duomo/" target="_blank" rel="noopener">Ver en el mapa</a>
+            </div>
+            <button type="button" class="apt-toggle" data-target="apt-duomo" aria-controls="apt-duomo" aria-expanded="false">Más detalles</button>
+            <div id="apt-duomo" class="apt-details">
+              <p>Ejemplo: apartamento “Duomo Panorama” con 2 habitaciones, cocina completa y ventanas grandes, ideal para explotar la ciudad a pie.</p>
+              <a class="apt-link" href="https://www.booking.com/searchresults.es.html?city=-117525&aid=304142" target="_blank" rel="noopener">Reservar en Booking</a>
+            </div>
           </article>
 
           <article class="stay">
@@ -378,6 +440,15 @@
               <li>Perfecto para llegar/salir sin estrés.</li>
               <li>Ideal si vais a priorizar comodidad sobre “encanto” del barrio.</li>
             </ul>
+            <div class="apt-meta">
+              <span>Precio promedio: 165 €/noche</span>
+              <a href="https://www.google.com/maps/place/Milano+Centrale/" target="_blank" rel="noopener">Ver en el mapa</a>
+            </div>
+            <button type="button" class="apt-toggle" data-target="apt-centrale" aria-controls="apt-centrale" aria-expanded="false">Más detalles</button>
+            <div id="apt-centrale" class="apt-details">
+              <p>Apartamento tipo “city hub” con sofá cama, nevera grande y acceso rápido a trenes/buses para el partido o excursiones.</p>
+              <a class="apt-link" href="https://www.booking.com/searchresults.es.html?city=-117527&aid=304142" target="_blank" rel="noopener">Reservar en Booking</a>
+            </div>
           </article>
 
           <article class="stay">
@@ -389,6 +460,72 @@
               <li>Perfecta para cenas y ambiente por la tarde-noche.</li>
               <li>Contras: algunas calles pueden ser ruidosas.</li>
             </ul>
+            <div class="apt-meta">
+              <span>Precio orientativo: 190 €/noche</span>
+              <a href="https://www.google.com/maps/place/Navigli,+Milano/" target="_blank" rel="noopener">Ver en el mapa</a>
+            </div>
+            <button type="button" class="apt-toggle" data-target="apt-navigli" aria-controls="apt-navigli" aria-expanded="false">Más detalles</button>
+            <div id="apt-navigli" class="apt-details">
+              <p>Estudio con balcón sobre el canal, kitchenette completa y limpieza diaria opcional para mantener alertas a los teens tras el partido.</p>
+              <a class="apt-link" href="https://www.booking.com/searchresults.es.html?city=-117531&aid=304142" target="_blank" rel="noopener">Reservar en Booking</a>
+            </div>
+          </article>
+          <article class="stay">
+            <h3>Isola Loft económico</h3>
+            <p class="muted" style="margin:0">Zona emergente con metros y vida local, ideal para estancias con presupuesto contenido.</p>
+            <div class="tagrow"><span class="tag">🚇 Metro</span><span class="tag">🪄 Creativo</span><span class="tag">€</span></div>
+            <div class="divider"></div>
+            <ul class="list">
+              <li>Loft compacto con litera, cocina pequeña y buena conexión a la red verde.</li>
+              <li>Perfecto para familias que priorizan ahorro sin renunciar a limpieza de hotel.</li>
+            </ul>
+            <div class="apt-meta">
+              <span>Precio económico: 125 €/noche</span>
+              <a href="https://www.google.com/maps/place/Isola,+Milano/" target="_blank" rel="noopener">Ver en el mapa</a>
+            </div>
+            <button type="button" class="apt-toggle" data-target="apt-isola" aria-controls="apt-isola" aria-expanded="false">Más detalles</button>
+            <div id="apt-isola" class="apt-details">
+              <p>Apartamento tipo loft con cama alta, escritorio y cocina compartida; ideal para noches tranquilas tras el partido.</p>
+              <a class="apt-link" href="https://www.airbnb.com/s/Isola--Milan--Italy/homes" target="_blank" rel="noopener">Reservar en Airbnb</a>
+            </div>
+          </article>
+          <article class="stay">
+            <h3>Città Studi Studio</h3>
+            <p class="muted" style="margin:0">Barrio universitario con metro directo y cafés tranquilos.</p>
+            <div class="tagrow"><span class="tag">🎓 Universitario</span><span class="tag">🍽️ Cafeterías</span><span class="tag">€</span></div>
+            <div class="divider"></div>
+            <ul class="list">
+              <li>Mini piso con cama doble, cocina equipada y lavandería en el mismo edificio.</li>
+              <li>Buena opción para familias que planean cocinar y hacer excursiones ligeras.</li>
+            </ul>
+            <div class="apt-meta">
+              <span>Precio promedio: 120 €/noche</span>
+              <a href="https://www.google.com/maps/place/Citt%C3%A0+Studi,+Milano/" target="_blank" rel="noopener">Ver en el mapa</a>
+            </div>
+            <button type="button" class="apt-toggle" data-target="apt-cittastudi" aria-controls="apt-cittastudi" aria-expanded="false">Más detalles</button>
+            <div id="apt-cittastudi" class="apt-details">
+              <p>Apartamento con dormitorio grande, sofá cama y balcón trasero para mantener la tranquilidad en las noches de partido.</p>
+              <a class="apt-link" href="https://www.booking.com/searchresults.es.html?city=-117566&aid=304142" target="_blank" rel="noopener">Reservar en Booking</a>
+            </div>
+          </article>
+          <article class="stay">
+            <h3>Porta Romana Budget</h3>
+            <p class="muted" style="margin:0">Zona residencial con parques y buen acceso al transporte nocturno.</p>
+            <div class="tagrow"><span class="tag">🌳 Residencial</span><span class="tag">🚆 Tranquilo</span><span class="tag">€</span></div>
+            <div class="divider"></div>
+            <ul class="list">
+              <li>Flat con 2 camas y cocina, muy cerca del tram que llega al centro.</li>
+              <li>Recomendado si buscáis bajar el presupuesto sin salir de la ciudad principal.</li>
+            </ul>
+            <div class="apt-meta">
+              <span>Precio orientativo: 110 €/noche</span>
+              <a href="https://www.google.com/maps/place/Porta+Romana,+Milano/" target="_blank" rel="noopener">Ver en el mapa</a>
+            </div>
+            <button type="button" class="apt-toggle" data-target="apt-portaromana" aria-controls="apt-portaromana" aria-expanded="false">Más detalles</button>
+            <div id="apt-portaromana" class="apt-details">
+              <p>Pequeño apartamento familiar con sofá cama doble, Wi-Fi y cocina abierta para desayunos rápidos antes del bus a BGY.</p>
+              <a class="apt-link" href="https://www.airbnb.com/s/Porta-Romana--Milan--Italy/homes" target="_blank" rel="noopener">Reservar en Airbnb</a>
+            </div>
           </article>
         </div>
 
@@ -658,5 +795,18 @@
       Copia este HTML en un archivo <code>milan_24_27_2026.html</code> y ábrelo en el navegador (móvil/desktop).
     </footer>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".apt-toggle").forEach((button) => {
+        const target = document.getElementById(button.getAttribute("data-target"));
+        if (!target) return;
+        button.addEventListener("click", () => {
+          const expanded = target.classList.toggle("expanded");
+          button.setAttribute("aria-expanded", expanded);
+          button.textContent = expanded ? "Ocultar detalles" : "Más detalles";
+        });
+      });
+    });
+  </script>
 </body>
 </html>
