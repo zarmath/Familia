@@ -660,12 +660,12 @@
 </div>
 
 <div class="nav-tabs">
-  <button class="tab-btn active" onclick="showSection('test')">🎯 Test General</button>
-  <button class="tab-btn" onclick="showSection('cdci')">📌 CD y CI</button>
-  <button class="tab-btn" onclick="showSection('atrib')">⚖️ Atributo vs CPred</button>
-  <button class="tab-btn" onclick="showSection('pasiva')">🔄 Voz Pasiva</button>
-  <button class="tab-btn" onclick="showSection('formacion')">🔧 Formación Palabras</button>
-  <button class="tab-btn" onclick="showSection('trucos')">💡 Trucos</button>
+  <button class="tab-btn active" onclick="showSection('test', this)">🎯 Test General</button>
+  <button class="tab-btn" onclick="showSection('cdci', this)">📌 CD y CI</button>
+  <button class="tab-btn" onclick="showSection('atrib', this)">⚖️ Atributo vs CPred</button>
+  <button class="tab-btn" onclick="showSection('pasiva', this)">🔄 Voz Pasiva</button>
+  <button class="tab-btn" onclick="showSection('formacion', this)">🔧 Formación Palabras</button>
+  <button class="tab-btn" onclick="showSection('trucos', this)">💡 Trucos</button>
 </div>
 
 <main>
@@ -1162,11 +1162,15 @@ let state = {
 // NAVIGATION
 // ============================================================
 
-function showSection(name) {
+function showSection(name, clickedBtn) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('section-' + name).classList.add('active');
-  event.target.classList.add('active');
+  const sectionEl = document.getElementById('section-' + name);
+  if (!sectionEl) return;
+  sectionEl.classList.add('active');
+
+  const activeBtn = clickedBtn || (typeof event !== 'undefined' ? event.target : null);
+  if (activeBtn && activeBtn.classList) activeBtn.classList.add('active');
 
   if (name !== 'trucos') {
     loadSection(name);
@@ -1181,6 +1185,9 @@ function loadSection(name) {
   else if (name === 'atrib') qList = shuffle([...questions.atrib]);
   else if (name === 'pasiva') qList = shuffle([...questions.pasiva]);
   else if (name === 'formacion') qList = shuffle([...questions.formacion]);
+  else qList = [];
+
+  if (!qList.length) return;
 
   state.questions = qList;
   state.currentIdx = 0;
@@ -1219,7 +1226,7 @@ function renderQuestion(container, sectionName) {
       }
       <div class="options" id="options-${state.currentIdx}">
         ${q.options.map((opt, i) => `
-          <button class="option-btn" onclick="selectAnswer(${i}, ${q.correct}, '${sectionName}', '${q.explanation.replace(/'/g, "\\'")}')">
+          <button class="option-btn" onclick="selectAnswer(${i}, ${q.correct}, '${sectionName}')">
             <span class="option-letter">${letters[i]}</span>
             <span>${opt}</span>
           </button>
@@ -1239,9 +1246,11 @@ function renderQuestion(container, sectionName) {
 // SELECT ANSWER
 // ============================================================
 
-function selectAnswer(selected, correct, sectionName, explanation) {
+function selectAnswer(selected, correct, sectionName) {
   const buttons = document.querySelectorAll('.option-btn');
   buttons.forEach(b => b.disabled = true);
+  const currentQuestion = state.questions[state.currentIdx];
+  const explanation = currentQuestion ? currentQuestion.explanation : '';
 
   const isCorrect = selected === correct;
   state.answered++;
